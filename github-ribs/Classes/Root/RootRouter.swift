@@ -22,7 +22,6 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
 
     // TODO: Constructor inject child builder protocols to allow building children.
     private let jobListBuilder: GithubJobListBuildable
-    //private let viewController: RootViewControllable
     
     init(interactor: RootInteractable, viewController: RootViewControllable, jobListBuilder: GithubJobListBuildable) {
         self.jobListBuilder = jobListBuilder
