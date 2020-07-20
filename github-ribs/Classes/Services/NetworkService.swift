@@ -28,7 +28,6 @@ protocol NetworkService {
 
 
 extension NetworkService {
-    
     /// API request
     /// moya concept을 빌려옴
     /// - Parameter api: api path generic

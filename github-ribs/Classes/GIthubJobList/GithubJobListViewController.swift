@@ -33,7 +33,7 @@ protocol GithubJobListPresentableListener: class {
 //View는 가능한 말이없는(dumb)것으로 설계되었습니다.
 //단지 정보를 표시 할 뿐입니다. 일반적으로 Unit Test가 필요한 코드는 포함되어 있지 않습니다.
 //출처; https://zeddios.tistory.com/937
-final class GithubJobListViewController: UIViewController, GithubJobListViewControllable {
+final class GithubJobListViewController: UIViewController, GithubJobListPresentable, GithubJobListViewControllable, Alertable {
 
     // MARK: - * Related --------------------
     weak var listener: GithubJobListPresentableListener?
@@ -42,29 +42,44 @@ final class GithubJobListViewController: UIViewController, GithubJobListViewCont
     private var incompleteJobs: [GithubJob] = []
     private var disposeBag = DisposeBag()
     
+    var activity = ActivityIndicator()
+    var errorTracker = ErrorTracker()
+    
     // MARK: - * IBOutlets --------------------
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     // MARK: - * Life Cycle --------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupAppearance()
         setupTableView()
-        listener?.fetchList()
-    }
-    
-    private func setupAppearance() {
+        setupRx()
         
+        listener?.fetchList()
     }
     
     private func setupTableView() {
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
     }
+    
+    private func setupRx() {
+        activity
+            .map { !$0 }
+            .drive(activityIndicatorView.rx.isHidden)
+            .disposed(by: disposeBag)
+        
+        errorTracker
+            .drive(onNext: { [weak self] error in
+                guard let self = self else { return }
+                self.showAlert(message: error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
-extension GithubJobListViewController: GithubJobListPresentable {
+extension GithubJobListViewController {
     
     func didFetchItems(items: Driver<[GithubJob]>) {
         items.drive(tableView.rx.items) { (tv, row, job) -> UITableViewCell in
@@ -79,11 +94,5 @@ extension GithubJobListViewController: GithubJobListPresentable {
     
     func showTitle(_ title: String) {
         self.title = title
-    }
-    
-    func showIncompleteJobs(_ jobs: [GithubJob]) {
-        incompleteJobs = jobs
-
-        tableView.reloadData()
     }
 }

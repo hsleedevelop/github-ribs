@@ -33,7 +33,7 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
     func buildList() {
         let jobList = jobListBuilder.build(withListener: interactor)
         attachChild(jobList)
-        self.viewController.present(viewController: jobList.viewControllable)
+        viewController.present(viewController: jobList.viewControllable)
     }
     
     override func didLoad() {

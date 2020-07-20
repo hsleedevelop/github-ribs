@@ -74,6 +74,40 @@
 			<key>uniqueIdentifier</key>
 			<string>0B2640A9-CD8E-4AD8-8390-1DAFCB6F2CC6</string>
 		</dict>
+		<key>1424B580-8E92-42B2-B4E7-FF9ADDF407D6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>1424B580-8E92-42B2-B4E7-FF9ADDF407D6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928485.56734204</real>
+			<key>timeStoppedRecording</key>
+			<real>616928491.81787205</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>1424B580-8E92-42B2-B4E7-FF9ADDF407D6</string>
+		</dict>
 		<key>24E25BF9-B6A2-4FC6-A759-A27CCD20866F</key>
 		<dict>
 			<key>className</key>
@@ -107,6 +141,40 @@
 			<string>Run github-ribs</string>
 			<key>uniqueIdentifier</key>
 			<string>24E25BF9-B6A2-4FC6-A759-A27CCD20866F</string>
+		</dict>
+		<key>33ECD913-E2A0-4BBB-AD59-E60AE7EA412D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>33ECD913-E2A0-4BBB-AD59-E60AE7EA412D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928584.11717796</real>
+			<key>timeStoppedRecording</key>
+			<real>616928595.21741998</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>33ECD913-E2A0-4BBB-AD59-E60AE7EA412D</string>
 		</dict>
 		<key>3662A79A-266B-4EAC-85F0-349DB806098C</key>
 		<dict>
@@ -142,6 +210,40 @@
 			<key>uniqueIdentifier</key>
 			<string>3662A79A-266B-4EAC-85F0-349DB806098C</string>
 		</dict>
+		<key>38DFC49F-1E12-4408-B8DD-88E0BEB17196</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>38DFC49F-1E12-4408-B8DD-88E0BEB17196.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928596.00922406</real>
+			<key>timeStoppedRecording</key>
+			<real>616928611.55323803</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>38DFC49F-1E12-4408-B8DD-88E0BEB17196</string>
+		</dict>
 		<key>4CC0221C-89EC-4EC1-B571-4EF5D1A7D6D9</key>
 		<dict>
 			<key>className</key>
@@ -175,6 +277,40 @@
 			<string>Run github-ribs</string>
 			<key>uniqueIdentifier</key>
 			<string>4CC0221C-89EC-4EC1-B571-4EF5D1A7D6D9</string>
+		</dict>
+		<key>5CCEC3DB-3137-4878-BAA6-F1EA153F8B11</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5CCEC3DB-3137-4878-BAA6-F1EA153F8B11.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928678.07748902</real>
+			<key>timeStoppedRecording</key>
+			<real>616928686.61884105</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>5CCEC3DB-3137-4878-BAA6-F1EA153F8B11</string>
 		</dict>
 		<key>67812D5B-82D7-4595-BFC2-287B9036B2FB</key>
 		<dict>
@@ -312,6 +448,142 @@
 			<key>uniqueIdentifier</key>
 			<string>AC053790-A911-4079-8FC6-75017C973530</string>
 		</dict>
+		<key>AE0C857A-C6D5-4E15-A1DF-96D9B7473A3F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AE0C857A-C6D5-4E15-A1DF-96D9B7473A3F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928687.40900004</real>
+			<key>timeStoppedRecording</key>
+			<real>616928695.75035298</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>AE0C857A-C6D5-4E15-A1DF-96D9B7473A3F</string>
+		</dict>
+		<key>B457BF13-60ED-4658-824C-FBD7669D1D9B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B457BF13-60ED-4658-824C-FBD7669D1D9B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928577.302724</real>
+			<key>timeStoppedRecording</key>
+			<real>616928584.05527401</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>B457BF13-60ED-4658-824C-FBD7669D1D9B</string>
+		</dict>
+		<key>C9FDCCE1-699B-4E59-B8E1-D506FC7F0689</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C9FDCCE1-699B-4E59-B8E1-D506FC7F0689.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928458.85254598</real>
+			<key>timeStoppedRecording</key>
+			<real>616928484.77177298</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>C9FDCCE1-699B-4E59-B8E1-D506FC7F0689</string>
+		</dict>
+		<key>EEB9D60C-BD3D-4624-B9F6-2E45DAF5FBAD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EEB9D60C-BD3D-4624-B9F6-2E45DAF5FBAD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928696.54376996</real>
+			<key>timeStoppedRecording</key>
+			<real>616928874.53646505</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>EEB9D60C-BD3D-4624-B9F6-2E45DAF5FBAD</string>
+		</dict>
 		<key>F18C8EC6-5EB0-4DBB-A2E7-B202C3966D8A</key>
 		<dict>
 			<key>className</key>
@@ -345,6 +617,74 @@
 			<string>Run github-ribs</string>
 			<key>uniqueIdentifier</key>
 			<string>F18C8EC6-5EB0-4DBB-A2E7-B202C3966D8A</string>
+		</dict>
+		<key>F61346A4-D2B6-4E01-B616-C29EE811366D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F61346A4-D2B6-4E01-B616-C29EE811366D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928618.25107098</real>
+			<key>timeStoppedRecording</key>
+			<real>616928661.72212696</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>F61346A4-D2B6-4E01-B616-C29EE811366D</string>
+		</dict>
+		<key>FBE490A6-4FAA-4FF2-B529-19EE2E4BB01E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FBE490A6-4FAA-4FF2-B529-19EE2E4BB01E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>github-ribs project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>github-ribs</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run github-ribs</string>
+			<key>timeStartedRecording</key>
+			<real>616928874.60434103</real>
+			<key>timeStoppedRecording</key>
+			<real>616928897.30861497</real>
+			<key>title</key>
+			<string>Run github-ribs</string>
+			<key>uniqueIdentifier</key>
+			<string>FBE490A6-4FAA-4FF2-B529-19EE2E4BB01E</string>
 		</dict>
 	</dict>
 </dict>

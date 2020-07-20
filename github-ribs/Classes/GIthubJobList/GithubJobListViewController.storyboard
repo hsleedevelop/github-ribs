@@ -69,10 +69,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="U4M-NG-oaK">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="U4M-NG-oaK" firstAttribute="centerY" secondItem="BNZ-bO-rhc" secondAttribute="centerY" id="4ji-eV-B62"/>
                             <constraint firstItem="FOd-7J-rVT" firstAttribute="top" secondItem="HgA-Aw-ocO" secondAttribute="top" id="L3Z-nZ-zb6"/>
+                            <constraint firstItem="U4M-NG-oaK" firstAttribute="centerX" secondItem="BNZ-bO-rhc" secondAttribute="centerX" id="Sga-7L-3cR"/>
                             <constraint firstItem="FOd-7J-rVT" firstAttribute="leading" secondItem="HgA-Aw-ocO" secondAttribute="leading" id="ZyC-t7-4TW"/>
                             <constraint firstItem="HgA-Aw-ocO" firstAttribute="trailing" secondItem="FOd-7J-rVT" secondAttribute="trailing" id="mbs-RZ-bcy"/>
                             <constraint firstItem="HgA-Aw-ocO" firstAttribute="bottom" secondItem="FOd-7J-rVT" secondAttribute="bottom" id="um4-ME-0Su"/>
@@ -80,6 +85,7 @@
                         <viewLayoutGuide key="safeArea" id="HgA-Aw-ocO"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="U4M-NG-oaK" id="fhK-pH-FoU"/>
                         <outlet property="tableView" destination="FOd-7J-rVT" id="t3S-rO-56p"/>
                     </connections>
                 </viewController>

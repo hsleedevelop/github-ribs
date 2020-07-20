@@ -63,8 +63,9 @@ final class GithubJobListBuilder: Builder<GithubJobListDependency>, GithubJobLis
 
     func build(withListener listener: GithubJobListListener) -> GithubJobListRouting {
         //let component = GithubJobListComponent(dependency: dependency) -> child dependency
-        guard let viewController = UIStoryboard(name: "GithubJobListViewController", bundle: Bundle.main).instantiateViewController(withIdentifier: "GithubJobListViewController") as? GithubJobListViewController else {
-            fatalError("GithubJobListViewController can't load")
+        guard let viewController = UIStoryboard(name: "GithubJobListViewController", bundle: Bundle.main)
+            .instantiateViewController(withIdentifier: "GithubJobListViewController") as? GithubJobListViewController else {
+                fatalError("GithubJobListViewController can't load")
         }
         
         let interactor = GithubJobListInteractor(presenter: viewController, service: dependency.service)

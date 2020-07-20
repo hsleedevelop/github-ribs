@@ -28,9 +28,12 @@ protocol GithubJobListPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
     // TODO: 인터랙터가 프레젠터를 호출하여 데이터를 표시할 수 있는 방법을 선언하십시오.
     //var fetchedItems: Driver<[GithubJob]> { get set }
+    var activity: ActivityIndicator { get set }
+    var errorTracker: ErrorTracker { get set }
 
     func showTitle(_ title: String)
     func didFetchItems(items: Driver<[GithubJob]>)
+    
 }
 
 protocol GithubJobListListener: class {
@@ -55,7 +58,7 @@ protocol GithubJobListListener: class {
 //
 //이렇게하면 Interactor가 비활성화되는 시나리오는 방지되지만 subscriptions이 계속 발생하여
 //비즈니스 로직 또는 UI상태에 원치 않는 업데이트가 발생합니다.
-//(-> 그니까 Interactor가 수행하는 모든 작업은 반드시 lifecycle에  국한)
+//(-> Interactor가 수행하는 모든 작업은 반드시 lifecycle에  국한)
 //ref - https://zeddios.tistory.com/937
 final class GithubJobListInteractor: PresentableInteractor<GithubJobListPresentable>, GithubJobListInteractable, GithubJobListPresentableListener {
 
@@ -77,8 +80,6 @@ final class GithubJobListInteractor: PresentableInteractor<GithubJobListPresenta
     override func didBecomeActive() {
         super.didBecomeActive()
         // TODO: Implement business logic here.
-        //fetchList()
-        
         presenter.showTitle("Job List")
     }
 
@@ -86,30 +87,13 @@ final class GithubJobListInteractor: PresentableInteractor<GithubJobListPresenta
         super.willResignActive()
         // TODO: Pause any business logic.
     }
-    //Cannot convert value of type '(Driver<[GithubJob]>) -> ()' (aka '(SharedSequence<DriverSharingStrategy, Array<GithubJob>>) -> ()') to expected argument type '(Array<GithubJob>) -> _'
-    func fetchList() {
-        //presenter.showLoading(with: "Loading...")
-        let xx = service.list()
-            .asDriver(onErrorJustReturn: [])
-        presenter.didFetchItems(items: xx)
-            //.disposeOnDeactivate(interactor: self)
 
-//        service.getIncompleteItems { [weak self] (response) in
-//            guard let this = self else { return }
-//
-//            this.presenter.hideLoading()
-//
-//            switch response {
-//            case .success(let items):
-//                let itemVMs = items.map { ItemViewModel(model: $0) }
-//
-//                this.incompleItems = itemVMs
-//
-//                this.presenter.showIncompleteItems(itemVMs)
-//                this.reloadCompletedItems()
-//            case .error(let error):
-//                this.presenter.showError(with: error.message)
-//            }
-//        }
+    func fetchList() {
+        let fetchedItems = service.list()
+            .trackActivity(presenter.activity)
+            .trackError(presenter.errorTracker)
+            .asDriver(onErrorJustReturn: [])
+        
+        presenter.didFetchItems(items: fetchedItems)
     }
 }

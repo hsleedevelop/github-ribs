@@ -39,7 +39,6 @@
 		3AADBF1424C1877C00DCE61F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF0A24C1877C00DCE61F /* ActivityIndicator.swift */; };
 		3AADBF1524C1877C00DCE61F /* Observable+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF0B24C1877C00DCE61F /* Observable+Ext.swift */; };
 		3AADBF1624C1877C00DCE61F /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF0D24C1877C00DCE61F /* ObservableType+Extensions.swift */; };
-		3AADBF1724C1877C00DCE61F /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF0E24C1877C00DCE61F /* NSObject+Extensions.swift */; };
 		3AADBF1824C1877C00DCE61F /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF0F24C1877C00DCE61F /* Data+Extensions.swift */; };
 		3AADBF1924C1877C00DCE61F /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF1124C1877C00DCE61F /* Alertable.swift */; };
 		3AADBF1B24C18BD000DCE61F /* GithubJob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBF1A24C18BD000DCE61F /* GithubJob.swift */; };
@@ -95,7 +94,6 @@
 		3AADBF0A24C1877C00DCE61F /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		3AADBF0B24C1877C00DCE61F /* Observable+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Ext.swift"; sourceTree = "<group>"; };
 		3AADBF0D24C1877C00DCE61F /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extensions.swift"; sourceTree = "<group>"; };
-		3AADBF0E24C1877C00DCE61F /* NSObject+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		3AADBF0F24C1877C00DCE61F /* Data+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
 		3AADBF1124C1877C00DCE61F /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		3AADBF1A24C18BD000DCE61F /* GithubJob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubJob.swift; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 			isa = PBXGroup;
 			children = (
 				3AADBF0D24C1877C00DCE61F /* ObservableType+Extensions.swift */,
-				3AADBF0E24C1877C00DCE61F /* NSObject+Extensions.swift */,
 				3AADBF0F24C1877C00DCE61F /* Data+Extensions.swift */,
 			);
 			path = Extensions;
@@ -517,7 +514,6 @@
 				3AADBEEF24C14C3400DCE61F /* RootBuilder.swift in Sources */,
 				3AADBEF724C171EF00DCE61F /* GithubJobListRouter.swift in Sources */,
 				3AADBF1824C1877C00DCE61F /* Data+Extensions.swift in Sources */,
-				3AADBF1724C1877C00DCE61F /* NSObject+Extensions.swift in Sources */,
 				3AADBEF924C171EF00DCE61F /* GithubJobListViewController.swift in Sources */,
 				3AADBF0124C186C300DCE61F /* GIthubNetworkService.swift in Sources */,
 				3AADBF0324C186CB00DCE61F /* ImageNetworkService.swift in Sources */,
