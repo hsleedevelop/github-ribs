@@ -19,8 +19,9 @@ protocol RootPresentableListener: class {
 final class RootViewController: UIViewController, RootPresentable, RootViewControllable {
     
     func present(viewController: ViewControllable) {
-        viewController.uiviewController.modalPresentationStyle = .fullScreen
-        self.present(viewController.uiviewController, animated: false, completion: nil)
+        let navigationViewController = UINavigationController(rootViewController: viewController.uiviewController)
+        navigationViewController.modalPresentationStyle = .fullScreen
+        self.present(navigationViewController, animated: false, completion: nil)
     }
 
     weak var listener: RootPresentableListener?

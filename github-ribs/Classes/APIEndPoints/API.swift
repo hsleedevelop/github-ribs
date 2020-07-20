@@ -9,7 +9,7 @@
 import Foundation
 
 protocol API {
-    var url: String { get }
+    var path: String { get }
 }
 
 enum GithubAPI: API {
@@ -33,9 +33,5 @@ enum GithubAPI: API {
         default:
             return "GET"
         }
-    }
-    
-    var url: String {
-        return "" + self.path
     }
 }

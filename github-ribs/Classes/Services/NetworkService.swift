@@ -34,7 +34,7 @@ extension NetworkService {
     /// - Parameter api: api path generic
     /// - Returns: response date
     func request(baseURL: String, api: T) -> Observable<Data> {
-        guard let url = URL(string: api.url) else {
+        guard let url = URL(string: baseURL + api.path) else {
             return Observable.error(NetworkError.urlGeneration)
         }
         #if DEBUG

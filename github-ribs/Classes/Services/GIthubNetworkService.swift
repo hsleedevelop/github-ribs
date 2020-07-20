@@ -9,7 +9,11 @@
 import Foundation
 import RxSwift
 
-final class GithubNetworkService: NetworkService {
+protocol GithubServiceProtocol: class {
+    func list() -> Observable<[GithubJob]>
+}
+
+final class GithubNetworkService: NetworkService, GithubServiceProtocol {
     typealias T = GithubAPI
     var baseURL: String
 

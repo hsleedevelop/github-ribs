@@ -9,12 +9,6 @@
 import UIKit
 import RIBs
 
-class AppComponent: Component<EmptyDependency>, RootDependency {
-    init() {
-        super.init(dependency: EmptyComponent())
-    }
-}
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

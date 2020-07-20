@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		01D5DED5946F48E2BD811B2E /* Pods_github_ribsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002D6CDFE1E43FE6465EB239 /* Pods_github_ribsTests.framework */; };
+		3A5F341924C533B600F97A42 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F341824C533B600F97A42 /* AppComponent.swift */; };
+		3A5F342024C535FA00F97A42 /* JobListDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F341B24C535FA00F97A42 /* JobListDetailRouter.swift */; };
+		3A5F342124C535FA00F97A42 /* JobListDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5F341C24C535FA00F97A42 /* JobListDetailViewController.storyboard */; };
+		3A5F342224C535FA00F97A42 /* JobListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F341D24C535FA00F97A42 /* JobListDetailViewController.swift */; };
+		3A5F342324C535FA00F97A42 /* JobListDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F341E24C535FA00F97A42 /* JobListDetailBuilder.swift */; };
+		3A5F342424C535FA00F97A42 /* JobListDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F341F24C535FA00F97A42 /* JobListDetailInteractor.swift */; };
+		3A5F342A24C5850000F97A42 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5F342924C5850000F97A42 /* MainTableViewCell.swift */; };
 		3AADBEC524C1480900DCE61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBEC424C1480900DCE61F /* AppDelegate.swift */; };
 		3AADBEC724C1480900DCE61F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADBEC624C1480900DCE61F /* SceneDelegate.swift */; };
 		3AADBECC24C1480900DCE61F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AADBECA24C1480900DCE61F /* Main.storyboard */; };
@@ -53,6 +60,13 @@
 /* Begin PBXFileReference section */
 		002D6CDFE1E43FE6465EB239 /* Pods_github_ribsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_github_ribsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0819918586F59D7EEFAF8063 /* Pods-github-ribs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-github-ribs.release.xcconfig"; path = "Target Support Files/Pods-github-ribs/Pods-github-ribs.release.xcconfig"; sourceTree = "<group>"; };
+		3A5F341824C533B600F97A42 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		3A5F341B24C535FA00F97A42 /* JobListDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListDetailRouter.swift; sourceTree = "<group>"; };
+		3A5F341C24C535FA00F97A42 /* JobListDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JobListDetailViewController.storyboard; sourceTree = "<group>"; };
+		3A5F341D24C535FA00F97A42 /* JobListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListDetailViewController.swift; sourceTree = "<group>"; };
+		3A5F341E24C535FA00F97A42 /* JobListDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListDetailBuilder.swift; sourceTree = "<group>"; };
+		3A5F341F24C535FA00F97A42 /* JobListDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobListDetailInteractor.swift; sourceTree = "<group>"; };
+		3A5F342924C5850000F97A42 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		3AADBEC124C1480800DCE61F /* github-ribs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "github-ribs.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AADBEC424C1480900DCE61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AADBEC624C1480900DCE61F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +146,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3A5F341A24C535DD00F97A42 /* JobListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F341B24C535FA00F97A42 /* JobListDetailRouter.swift */,
+				3A5F341C24C535FA00F97A42 /* JobListDetailViewController.storyboard */,
+				3A5F341D24C535FA00F97A42 /* JobListDetailViewController.swift */,
+				3A5F341E24C535FA00F97A42 /* JobListDetailBuilder.swift */,
+				3A5F341F24C535FA00F97A42 /* JobListDetailInteractor.swift */,
+			);
+			path = JobListDetail;
+			sourceTree = "<group>";
+		};
+		3A5F342524C5848600F97A42 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3A5F342924C5850000F97A42 /* MainTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		3AADBEB824C1480800DCE61F = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +211,9 @@
 				3AADBF0424C186FD00DCE61F /* APIEndPoints */,
 				3AADBEFD24C1869700DCE61F /* Services */,
 				3AADBEFC24C1844A00DCE61F /* Model */,
-				3AADBEF124C171C000DCE61F /* GIthubJobList */,
 				3AADBEE824C14C1F00DCE61F /* Root */,
+				3AADBEF124C171C000DCE61F /* GIthubJobList */,
+				3A5F341A24C535DD00F97A42 /* JobListDetail */,
 				3AADBF0724C1877C00DCE61F /* Utils */,
 				3AADBEC424C1480900DCE61F /* AppDelegate.swift */,
 				3AADBEC624C1480900DCE61F /* SceneDelegate.swift */,
@@ -211,6 +246,7 @@
 		3AADBEF124C171C000DCE61F /* GIthubJobList */ = {
 			isa = PBXGroup;
 			children = (
+				3A5F342524C5848600F97A42 /* Cells */,
 				3AADBEF224C171EF00DCE61F /* GithubJobListRouter.swift */,
 				3AADBEF324C171EF00DCE61F /* GithubJobListViewController.storyboard */,
 				3AADBEF424C171EF00DCE61F /* GithubJobListViewController.swift */,
@@ -281,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				3AADBF1F24C18C6C00DCE61F /* AppConfigurations.swift */,
+				3A5F341824C533B600F97A42 /* AppComponent.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -369,6 +406,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5F342124C535FA00F97A42 /* JobListDetailViewController.storyboard in Resources */,
 				3AADBED124C1480900DCE61F /* LaunchScreen.storyboard in Resources */,
 				3AADBECE24C1480900DCE61F /* Assets.xcassets in Resources */,
 				3AADBEF824C171EF00DCE61F /* GithubJobListViewController.storyboard in Resources */,
@@ -458,15 +496,21 @@
 				3AADBEFB24C171EF00DCE61F /* GithubJobListInteractor.swift in Sources */,
 				3AADBF1B24C18BD000DCE61F /* GithubJob.swift in Sources */,
 				3AADBEFA24C171EF00DCE61F /* GithubJobListBuilder.swift in Sources */,
+				3A5F342A24C5850000F97A42 /* MainTableViewCell.swift in Sources */,
 				3AADBF1324C1877C00DCE61F /* ErrorTracker.swift in Sources */,
+				3A5F341924C533B600F97A42 /* AppComponent.swift in Sources */,
+				3A5F342324C535FA00F97A42 /* JobListDetailBuilder.swift in Sources */,
 				3AADBF1524C1877C00DCE61F /* Observable+Ext.swift in Sources */,
 				3AADBF1224C1877C00DCE61F /* Utilities.swift in Sources */,
 				3AADBEEE24C14C3400DCE61F /* RootViewController.swift in Sources */,
+				3A5F342024C535FA00F97A42 /* JobListDetailRouter.swift in Sources */,
 				3AADBEED24C14C3400DCE61F /* RootRouter.swift in Sources */,
 				3AADBF1924C1877C00DCE61F /* Alertable.swift in Sources */,
+				3A5F342424C535FA00F97A42 /* JobListDetailInteractor.swift in Sources */,
 				3AADBEF024C14C3400DCE61F /* RootInteractor.swift in Sources */,
 				3AADBF0624C1871700DCE61F /* API.swift in Sources */,
 				3AADBF2524C18C6C00DCE61F /* AppConfigurations.swift in Sources */,
+				3A5F342224C535FA00F97A42 /* JobListDetailViewController.swift in Sources */,
 				3AADBEC524C1480900DCE61F /* AppDelegate.swift in Sources */,
 				3AADBEC724C1480900DCE61F /* SceneDelegate.swift in Sources */,
 				3AADBF1624C1877C00DCE61F /* ObservableType+Extensions.swift in Sources */,
