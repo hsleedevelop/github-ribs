@@ -1,5 +1,5 @@
 //
-//  GithubJobListViewController.swift
+//  JobListViewController.swift
 //  github-ribs
 //
 //  Created by HS Lee on 2020/07/17.
@@ -11,7 +11,7 @@ import RIBs
 import RxSwift
 import RxCocoa
 
-protocol GithubJobListPresentableListener: class {
+protocol JobListPresentableListener: class {
     // TODO: Declare properties and methods that the view controller can invoke to perform
     // business logic, such as signIn(). This protocol is implemented by the corresponding
     // interactor class.
@@ -20,6 +20,7 @@ protocol GithubJobListPresentableListener: class {
     // 이 프로토콜은 해당 인터랙터 클래스에 의해 구현된다.
     
     func fetchList()
+    func didSelectItem(job: GithubJob)
 }
 
 
@@ -33,13 +34,12 @@ protocol GithubJobListPresentableListener: class {
 //View는 가능한 말이없는(dumb)것으로 설계되었습니다.
 //단지 정보를 표시 할 뿐입니다. 일반적으로 Unit Test가 필요한 코드는 포함되어 있지 않습니다.
 //출처; https://zeddios.tistory.com/937
-final class GithubJobListViewController: UIViewController, GithubJobListPresentable, GithubJobListViewControllable, Alertable {
+final class JobListViewController: UIViewController, JobListPresentable, JobListViewControllable, Alertable {
 
     // MARK: - * Related --------------------
-    weak var listener: GithubJobListPresentableListener?
+    weak var listener: JobListPresentableListener?
     
     // MARK: - * Properties --------------------
-    private var incompleteJobs: [GithubJob] = []
     private var disposeBag = DisposeBag()
     
     var activity = ActivityIndicator()
@@ -76,10 +76,30 @@ final class GithubJobListViewController: UIViewController, GithubJobListPresenta
                 self.showAlert(message: error.localizedDescription)
             })
             .disposed(by: disposeBag)
+        
+        
+        Observable.zip(tableView.rx.itemSelected, tableView.rx.modelSelected(GithubJob.self))
+            .do(onNext: { [weak self] in
+                self?.tableView.deselectRow(at: $0.0, animated: true)
+            })
+            .map { $0.1 }
+            .subscribe(onNext: { [weak self] job in
+                self?.listener?.didSelectItem(job: job)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    // MARK: - JobListViewControllable
+    func push(with view: ViewControllable) {
+        navigationController?.pushViewController(view.uiviewController, animated: true)
+    }
+    
+    func pop(with view: ViewControllable) {
+        navigationController?.popViewController(animated: true)
     }
 }
 
-extension GithubJobListViewController {
+extension JobListViewController {
     
     func didFetchItems(items: Driver<[GithubJob]>) {
         items.drive(tableView.rx.items) { (tv, row, job) -> UITableViewCell in

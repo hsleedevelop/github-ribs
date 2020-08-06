@@ -8,7 +8,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, GithubJobListListener {
+protocol RootInteractable: Interactable, JobListListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -21,9 +21,9 @@ protocol RootViewControllable: ViewControllable {
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    private let jobListBuilder: GithubJobListBuildable
+    private let jobListBuilder: JobListBuildable
     
-    init(interactor: RootInteractable, viewController: RootViewControllable, jobListBuilder: GithubJobListBuildable) {
+    init(interactor: RootInteractable, viewController: RootViewControllable, jobListBuilder: JobListBuildable) {
         self.jobListBuilder = jobListBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self

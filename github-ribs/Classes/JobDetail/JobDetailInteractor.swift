@@ -1,5 +1,5 @@
 //
-//  JobListDetailInteractor.swift
+//  JobDetailInteractor.swift
 //  github-ribs
 //
 //  Created by HS Lee on 2020/07/20.
@@ -9,27 +9,31 @@
 import RIBs
 import RxSwift
 
-protocol JobListDetailRouting: ViewableRouting {
+protocol JobDetailRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
-protocol JobListDetailPresentable: Presentable {
-    var listener: JobListDetailPresentableListener? { get set }
+protocol JobDetailPresentable: Presentable {
+    var listener: JobDetailPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
+    func loadURL(_ url: URL)
 }
 
-protocol JobListDetailListener: class {
+protocol JobDetailListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class JobListDetailInteractor: PresentableInteractor<JobListDetailPresentable>, JobListDetailInteractable, JobListDetailPresentableListener {
+final class JobDetailInteractor: PresentableInteractor<JobDetailPresentable>, JobDetailInteractable, JobDetailPresentableListener {
 
-    weak var router: JobListDetailRouting?
-    weak var listener: JobListDetailListener?
+    weak var router: JobDetailRouting?
+    weak var listener: JobDetailListener?
+    
+    private let job: GithubJob
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: JobListDetailPresentable) {
+    init(presenter: JobDetailPresentable, job: GithubJob) {
+        self.job = job
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -42,5 +46,11 @@ final class JobListDetailInteractor: PresentableInteractor<JobListDetailPresenta
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    func didPrepareView() {
+        if let url = URL(string: job.companyUrl ?? job.companyLogo ?? "") {
+            presenter.loadURL(url)
+        }
     }
 }

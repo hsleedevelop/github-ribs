@@ -7,8 +7,9 @@
 //
 
 import RIBs
+import RxSwift
 
-protocol GithubJobListDependency: Dependency {
+protocol JobListDependency: Dependency {
     // TODO: Declare the set of dependencies required by this RIB, but cannot be
     // created by this RIB.
     //이 RIB에 필요한 종속성 집합을 선언하지만 이 RIB에서 생성할 수 없음.
@@ -28,7 +29,7 @@ protocol GithubJobListDependency: Dependency {
 //자식에서 부모 RIB의 종속성에 대한 액세스 권한을 부여합니다.
 //
 //출처: https://zeddios.tistory.com/937
-final class GithubJobListComponent: Component<GithubJobListDependency> {
+final class JobListComponent: Component<JobListDependency>, JobDetailDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
     // 이 RIB에서만 사용되는 'fileprivate' 종속성을 선언하십시오
@@ -39,7 +40,7 @@ final class GithubJobListComponent: Component<GithubJobListDependency> {
 
 // MARK: - Builder
 
-protocol GithubJobListBuildable: Buildable {
+protocol JobListBuildable: Buildable {
     func build(withListener listener: GithubJobListListener) -> GithubJobListRouting
 }
 
@@ -55,21 +56,23 @@ protocol GithubJobListBuildable: Buildable {
 //
 //출처: https://zeddios.tistory.com/937
 //
-final class GithubJobListBuilder: Builder<GithubJobListDependency>, GithubJobListBuildable {
+final class JobListBuilder: Builder<JobListDependency>, JobListBuildable {
 
-    override init(dependency: GithubJobListDependency) {
+    override init(dependency: JobListDependency) {
         super.init(dependency: dependency)
     }
 
     func build(withListener listener: GithubJobListListener) -> GithubJobListRouting {
-        //let component = GithubJobListComponent(dependency: dependency) -> child dependency
         guard let viewController = UIStoryboard(name: "GithubJobListViewController", bundle: Bundle.main)
             .instantiateViewController(withIdentifier: "GithubJobListViewController") as? GithubJobListViewController else {
                 fatalError("GithubJobListViewController can't load")
         }
-        
-        let interactor = GithubJobListInteractor(presenter: viewController, service: dependency.service)
+        let component = JobListComponent(dependency: dependency) //-> child dependency
+        let interactor = GithubJobListInteractor(presenter: viewController, service: component.service)
         interactor.listener = listener
-        return GithubJobListRouter(interactor: interactor, viewController: viewController)
+        
+        let detailBuilder = JobDetailBuilder(dependency: component)
+        let router = GithubJobListRouter(interactor: interactor, viewController: viewController, detailBuilder: detailBuilder)
+        return router
     }
 }

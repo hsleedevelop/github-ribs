@@ -1,5 +1,5 @@
 //
-//  GithubJobListInteractor.swift
+//  JobListInteractor.swift
 //  github-ribs
 //
 //  Created by HS Lee on 2020/07/17.
@@ -10,9 +10,10 @@ import RIBs
 import RxSwift
 import RxCocoa
 
-protocol GithubJobListRouting: ViewableRouting {
+protocol JobListRouting: ViewableRouting {
     // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
     // TODO: 인터렉터가 라우터를 통해 하위 트리를 관리하기 위해 호출할 수 있는 방법을 선언하십시오.
+    func routeToDetailJob(_ job: GithubJob)
 }
 
 //Presenter(Optional)
@@ -23,8 +24,8 @@ protocol GithubJobListRouting: ViewableRouting {
 //Presenter가 생략되면 ViewModel변환은 View(Controller) 또는 Interactor의 책임이 됩니다.
 //
 //출처: https://zeddios.tistory.com/937
-protocol GithubJobListPresentable: Presentable {
-    var listener: GithubJobListPresentableListener? { get set }
+protocol JobListPresentable: Presentable {
+    var listener: JobListPresentableListener? { get set }
     // TODO: Declare methods the interactor can invoke the presenter to present data.
     // TODO: 인터랙터가 프레젠터를 호출하여 데이터를 표시할 수 있는 방법을 선언하십시오.
     //var fetchedItems: Driver<[GithubJob]> { get set }
@@ -36,7 +37,7 @@ protocol GithubJobListPresentable: Presentable {
     
 }
 
-protocol GithubJobListListener: class {
+protocol JobListListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
     // TODO: 인터렉터가 다른 RIB와 통신하기 위해 호출할 수 있는 방법을 선언하십시오.
     //func didFetched()
@@ -60,17 +61,17 @@ protocol GithubJobListListener: class {
 //비즈니스 로직 또는 UI상태에 원치 않는 업데이트가 발생합니다.
 //(-> Interactor가 수행하는 모든 작업은 반드시 lifecycle에  국한)
 //ref - https://zeddios.tistory.com/937
-final class GithubJobListInteractor: PresentableInteractor<GithubJobListPresentable>, GithubJobListInteractable, GithubJobListPresentableListener {
-
-    weak var router: GithubJobListRouting?
-    weak var listener: GithubJobListListener?
+final class JobListInteractor: PresentableInteractor<JobListPresentable>, JobListInteractable, JobListPresentableListener {
+    
+    weak var router: JobListRouting?
+    weak var listener: JobListListener?
     
     private let service: GithubServiceProtocol
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
     // TODO: 생성자에 종속성을 추가하십시오. 생성자에서 논리를 수행하지 마십시오.
-    init(presenter: GithubJobListPresentable, service: GithubServiceProtocol) {
+    init(presenter: JobListPresentable, service: GithubServiceProtocol) {
         self.service = service
             
         super.init(presenter: presenter)
@@ -95,5 +96,9 @@ final class GithubJobListInteractor: PresentableInteractor<GithubJobListPresenta
             .asDriver(onErrorJustReturn: [])
         
         presenter.didFetchItems(items: fetchedItems)
+    }
+    
+    func didSelectItem(job: GithubJob) {
+        router?.routeToDetailJob(job)
     }
 }

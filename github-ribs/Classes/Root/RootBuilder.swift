@@ -15,7 +15,7 @@ protocol RootDependency: Dependency {
     var service: GithubServiceProtocol { get }
 }
 
-final class RootComponent: Component<RootDependency>, GithubJobListDependency {
+final class RootComponent: Component<RootDependency>, JobListDependency {
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
     // 이 RIB에서만 사용되는 'fileprivate' 종속성을 선언하십시오
     var service: GithubServiceProtocol {
@@ -39,7 +39,7 @@ final class RootBuilder: Builder<RootDependency>, RootBuildable {
         let component = RootComponent(dependency: dependency)
         let viewController = RootViewController()
         let interactor = RootInteractor(presenter: viewController)
-        let jobListBuilder = GithubJobListBuilder(dependency: component)
+        let jobListBuilder = JobListBuilder(dependency: component)
         return RootRouter(interactor: interactor, viewController: viewController, jobListBuilder: jobListBuilder)
     }
 }
